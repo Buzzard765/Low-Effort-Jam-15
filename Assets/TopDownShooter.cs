@@ -14,14 +14,14 @@ public class TopDownShooter : MonoBehaviour
     
     public int highscore;
     public static int score;
-    public Joystick js;
+    public Joystick MovementJS;
     // Start is called before the first frame update
     void Start()
     {
         cam = FindObjectOfType<Camera>();
         rb2d = GetComponent<Rigidbody2D>();
-        js = FindObjectOfType<Joystick>();
         health = maxhealth;
+        MovementJS = GameObject.Find("Movement Joystick").GetComponent<Joystick>();                
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class TopDownShooter : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);      
+        //mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);      
         Debug.Log(score);
     }
 
@@ -42,12 +42,12 @@ public class TopDownShooter : MonoBehaviour
     }
 
     void movementControl() {
-        //movement.x = js.Horizontal * movespeed;
-        //movement.y = js.Vertical * movespeed;
+        movement.x = MovementJS.Horizontal * movespeed;
+        movement.y = MovementJS.Vertical * movespeed;
         rb2d.MovePosition(rb2d.position + movement * movespeed * Time.deltaTime);
-        Vector2 lookDir = mousePos - rb2d.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        rb2d.rotation = angle;       
+        //Vector2 lookDir = mousePos - rb2d.position;
+        //float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        //rb2d.rotation = angle;       
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

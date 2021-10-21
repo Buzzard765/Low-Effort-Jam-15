@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
         findPlayer();
     }
 
-    public void findPlayer() {
+    public virtual void findPlayer() {
         Vector2 direction = PlayerPos.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
         enemyrb2d.rotation = angle;

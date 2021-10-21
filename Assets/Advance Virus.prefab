@@ -167,7 +167,9 @@ MonoBehaviour:
   bulletPF: {fileID: 3064686200801297366, guid: 1b091bd2e4e02064fa6174c71eb193ac,
     type: 3}
   Drops: {fileID: 3934764858375931321, guid: f8d5afe3c3049704299c0c50d8be6c81, type: 3}
-  StartFireRate: 1.5
+  StopDistance: 10
+  BackwardDistance: 7
+  StartFireRate: 2
 --- !u!50 &8254724340758740064
 Rigidbody2D:
   serializedVersion: 4

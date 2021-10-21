@@ -13,16 +13,17 @@ public class ScrollingBackground : MonoBehaviour
     void Start()
     {
         MR = GetComponent<MeshRenderer>();
-        Mat = MR.material;
+        
         PlayerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Mat = MR.material;
         Offset = Mat.mainTextureOffset;
-        Offset.x = PlayerPos.position.x;
-        Offset.y = PlayerPos.position.y;
+        Offset.x = PlayerPos.position.x / 10f;
+        Offset.y = PlayerPos.position.y / 10f;
         Mat.mainTextureOffset = Offset;
     }
 }

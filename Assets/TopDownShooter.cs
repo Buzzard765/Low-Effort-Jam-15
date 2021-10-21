@@ -27,6 +27,7 @@ public class TopDownShooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("test");
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         //mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);      

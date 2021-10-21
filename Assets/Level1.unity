@@ -496,7 +496,6 @@ GameObject:
   - component: {fileID: 357677991}
   - component: {fileID: 357677990}
   - component: {fileID: 357677992}
-  - component: {fileID: 357677993}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -511,7 +510,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357677989}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c2e55fa6c5f1654a8731231c69fd0af, type: 3}
   m_Name: 
@@ -536,7 +535,6 @@ MonoBehaviour:
   - {fileID: 721660403}
   - {fileID: 282807488}
   - {fileID: 356162711}
-  spawnRate: 0
   startSpawnRate: 3
 --- !u!4 &357677991
 Transform:
@@ -582,41 +580,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followspeed: 2
   Target: {fileID: 89130392}
---- !u!114 &357677993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 357677989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3e546fbd7991a64aa6873ff64d38737, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy:
-  - {fileID: 7640631141893172055, guid: 168b23a09af662e42868fa72901a058a, type: 3}
-  - {fileID: 7640631141893172055, guid: debfc7fc50212be49a86a4c600a93497, type: 3}
-  SpawnSpot:
-  - {fileID: 1752465575}
-  - {fileID: 2134318819}
-  - {fileID: 1999745606}
-  - {fileID: 571169084}
-  - {fileID: 1497403038}
-  - {fileID: 32205684}
-  - {fileID: 387471793}
-  - {fileID: 1225338054}
-  - {fileID: 424788464}
-  - {fileID: 582840299}
-  - {fileID: 1192718315}
-  - {fileID: 755032757}
-  - {fileID: 333325567}
-  - {fileID: 721660403}
-  - {fileID: 282807488}
-  - {fileID: 356162711}
-  spawnRate: 0
-  startSpawnRate: 3
-  spawnAmount: 5
 --- !u!1 &368047402
 GameObject:
   m_ObjectHideFlags: 0

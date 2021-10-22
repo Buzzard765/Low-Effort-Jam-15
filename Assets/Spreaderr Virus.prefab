@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &698602777902958863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 172071367237634577}
+  m_Layer: 0
+  m_Name: EnemyFP (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &172071367237634577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698602777902958863}
+  m_LocalRotation: {x: -0, y: -0, z: -0.2588186, w: 0.965926}
+  m_LocalPosition: {x: 1, y: 1.74, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7640631141893172052}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30.000002}
 --- !u!1 &2157840092798771071
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,7 +42,7 @@ GameObject:
   m_Layer: 0
   m_Name: EnemyFP
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -30,6 +60,36 @@ Transform:
   m_Father: {fileID: 7640631141893172052}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7253537416741373887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1584649161085277416}
+  m_Layer: 0
+  m_Name: EnemyFP (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1584649161085277416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7253537416741373887}
+  m_LocalRotation: {x: -0, y: -0, z: 0.25881818, w: 0.96592605}
+  m_LocalPosition: {x: -1, y: 1.74, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7640631141893172052}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30.000002}
 --- !u!1 &7640631141893172055
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,7 +104,7 @@ GameObject:
   - component: {fileID: 7424541109338712669}
   - component: {fileID: 8254724340758740064}
   m_Layer: 0
-  m_Name: Advance Virus
+  m_Name: Spreaderr Virus
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,6 +122,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2885467895447643345}
+  - {fileID: 1584649161085277416}
+  - {fileID: 172071367237634577}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -104,7 +166,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2853011766164936452, guid: 64ab52faac8cf704baed3c133fa56ae2,
+  m_Sprite: {fileID: 3230153013152815032, guid: 201f4b1deb1bb35498f29f56a883c93d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -133,7 +195,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.22, y: 1.23}
+    oldSize: {x: 1.74, y: 1.73}
     newSize: {x: 1.41, y: 1.41}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -154,22 +216,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47c80e29df0980149902f721ffa8aa21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2
+  score: 0
   enemyrb2d: {fileID: 0}
   PlayerPos: {fileID: 0}
   PlayerStats: {fileID: 0}
   movement: {x: 0, y: 0}
   sprrdr: {fileID: 0}
   randomSprite:
-  - {fileID: 2853011766164936452, guid: 64ab52faac8cf704baed3c133fa56ae2, type: 3}
-  - {fileID: 4180298707136297429, guid: 64ab52faac8cf704baed3c133fa56ae2, type: 3}
-  FiringPoint: {fileID: 2885467895447643345}
+  - {fileID: 3230153013152815032, guid: 201f4b1deb1bb35498f29f56a883c93d, type: 3}
+  - {fileID: -8510244886076544966, guid: 201f4b1deb1bb35498f29f56a883c93d, type: 3}
+  FiringPoint:
+  - {fileID: 2885467895447643345}
+  - {fileID: 1584649161085277416}
+  - {fileID: 172071367237634577}
   bulletPF: {fileID: 3064686200801297366, guid: 1b091bd2e4e02064fa6174c71eb193ac,
     type: 3}
   Drops: {fileID: 3934764858375931321, guid: f8d5afe3c3049704299c0c50d8be6c81, type: 3}
   StopDistance: 10
   BackwardDistance: 7
-  StartFireRate: 2
+  StartFireRate: 5
 --- !u!50 &8254724340758740064
 Rigidbody2D:
   serializedVersion: 4

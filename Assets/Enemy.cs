@@ -5,11 +5,11 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float speed;
+    public int score;
     [HideInInspector]public Rigidbody2D enemyrb2d;
     [HideInInspector] public Transform PlayerPos;
     [HideInInspector] public TopDownShooter PlayerStats;
     [HideInInspector] public Vector2 movement;
-
     [HideInInspector] public SpriteRenderer sprrdr;
     public Sprite[] randomSprite;
     // Start is called before the first frame update
@@ -39,7 +39,8 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.name.Contains("PlayerBullet")) {
             Destroy(gameObject);
-            TopDownShooter.score++;
+            CoreGameManager.score += score;
+            SpawnerNonEndless.limit++;
         }
     }
 }

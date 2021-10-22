@@ -6,7 +6,7 @@ public class Spawner : MonoBehaviour
 {
     public GameObject[] enemy;
     public Transform[] SpawnSpot;
-    public float spawnRate;
+    private float spawnRate;
     public float startSpawnRate;
     // Start is called before the first frame update
     void Start()

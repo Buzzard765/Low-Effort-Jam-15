@@ -186,7 +186,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 6
   maxhealth: 10
-  highscore: 0
   MovementJS: {fileID: 0}
 --- !u!212 &89130391
 SpriteRenderer:
@@ -511,7 +510,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357677989}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c2e55fa6c5f1654a8731231c69fd0af, type: 3}
   m_Name: 
@@ -536,7 +535,6 @@ MonoBehaviour:
   - {fileID: 721660403}
   - {fileID: 282807488}
   - {fileID: 356162711}
-  spawnRate: 0
   startSpawnRate: 3
 --- !u!4 &357677991
 Transform:
@@ -589,7 +587,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357677989}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3e546fbd7991a64aa6873ff64d38737, type: 3}
   m_Name: 
@@ -614,9 +612,9 @@ MonoBehaviour:
   - {fileID: 721660403}
   - {fileID: 282807488}
   - {fileID: 356162711}
-  spawnRate: 0
   startSpawnRate: 3
   spawnAmount: 5
+  limitRequired: 0
 --- !u!1 &368047402
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,6 +915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 474349272}
   - component: {fileID: 474349271}
+  - component: {fileID: 474349273}
   m_Layer: 0
   m_Name: Core
   m_TagString: Untagged
@@ -954,6 +953,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &474349273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474349270}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 480f2273d31ee0d448f0c3a3bc824d00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResultPanel: {fileID: 0}
+  ScoreText: {fileID: 0}
+  ResultText: {fileID: 0}
+  HealthText: {fileID: 0}
 --- !u!1 &485271082
 GameObject:
   m_ObjectHideFlags: 0

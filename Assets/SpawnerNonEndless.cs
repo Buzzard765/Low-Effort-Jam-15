@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class SpawnerNonEndless : Spawner
 {
-    //private float spawnRate;
+    private float spawnRate;
     [SerializeField] private int spawnAmount;
+    [HideInInspector]public static int limit;
+    [HideInInspector]public int limitRequired;
     // Start is called before the first frame update
     void Start()
     {
         spawnRate = startSpawnRate;
+        limitRequired = spawnAmount;
     }
 
     // Update is called once per frame
@@ -18,6 +21,10 @@ public class SpawnerNonEndless : Spawner
         if (TopDownShooter.health >= 0)
         {
             spawnEnemy();
+        }
+
+        if (limit == limitRequired) {
+            Debug.Log("Stage Cleared");
         }
     }
 

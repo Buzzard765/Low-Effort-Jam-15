@@ -11,9 +11,7 @@ public class TopDownShooter : MonoBehaviour
     private Camera cam;
     static public int health;
     public  int maxhealth;
-    
-    public int highscore;
-    public static int score;
+     
     public Joystick MovementJS;
     // Start is called before the first frame update
     void Start()
@@ -31,7 +29,7 @@ public class TopDownShooter : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         //mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);      
-        Debug.Log(score);
+        
     }
 
     private void FixedUpdate()

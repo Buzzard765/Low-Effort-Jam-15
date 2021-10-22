@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class advanceEnemy : Enemy
+public class ShooterEnemy : Enemy
 {
-    public Transform FiringPoint;
+    public Transform[] FiringPoint;
     public GameObject bulletPF;
     public GameObject Drops;
 
     public float StopDistance, BackwardDistance;
+    
 
     public float StartFireRate;
     private float FireRate;
@@ -36,20 +37,24 @@ public class advanceEnemy : Enemy
         {
             Instantiate(Drops, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            TopDownShooter.score++;
+            CoreGameManager.score += score;
+            SpawnerNonEndless.limit++;
         }
     }
 
-    void enemyShooting() {
-        if (FireRate <= 0)
-        {
-            GameObject homingbullet = Instantiate(bulletPF, FiringPoint.position, FiringPoint.rotation);
-            FireRate = StartFireRate;
-        }
-        else {
-            FireRate -= Time.deltaTime;
-        }
-        
+    void enemyShooting() {       
+            if (FireRate <= 0)
+            {
+                for (int i = 0; i < FiringPoint.Length; i++)
+                {
+                GameObject homingbullet = Instantiate(bulletPF, FiringPoint[i].position, FiringPoint[i].rotation);
+                FireRate = StartFireRate;
+                }
+            }
+            else
+            {
+                FireRate -= Time.deltaTime;
+            }
     }
 
     public override void findPlayer() {

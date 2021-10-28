@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class MainMenuScripts : MonoBehaviour
+public class MainMenuScripts : AllUIButtonScript
 {
     // Start is called before the first frame update
     void Start()
@@ -13,6 +14,14 @@ public class MainMenuScripts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ExitGame();
+        }
+    }
+
+    void ExitGame() {
         
+            Application.Quit();        
     }
 }

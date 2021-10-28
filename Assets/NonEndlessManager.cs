@@ -5,10 +5,13 @@ using UnityEngine;
 public class NonEndlessManager : CoreGameManager
 {
     SpawnerNonEndless Statistic;
+    [SerializeField] public GameObject Victory;
     // Start is called before the first frame update
     void Start()
     {
         Statistic = FindObjectOfType<SpawnerNonEndless>();
+        Victory = GameObject.Find("Victory");
+        Victory.SetActive(false);
     }
 
     // Update is called once per frame
@@ -22,14 +25,14 @@ public class NonEndlessManager : CoreGameManager
             GameOver();
             Debug.Log("Game Over");
         }
-        else if (SpawnerNonEndless.limit == Statistic.limitRequired && TopDownShooter.health != 0) {
+        else if (SpawnerNonEndless.limit == SpawnerNonEndless.limitRequired && TopDownShooter.health != 0) {
             Clear();
         }
     }
 
     public void Clear()
     {
-        ResultPanel.SetActive(true);
+        Victory.SetActive(true);
         ResultText.text = "Your Score: \n" + score.ToString();
     }
 }

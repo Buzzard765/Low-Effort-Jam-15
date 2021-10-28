@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  score: 0
   enemyrb2d: {fileID: 0}
   PlayerPos: {fileID: 0}
   PlayerStats: {fileID: 0}
@@ -168,6 +169,7 @@ MonoBehaviour:
   bulletPF: {fileID: 3064686200801297366, guid: 1b091bd2e4e02064fa6174c71eb193ac,
     type: 3}
   Drops: {fileID: 3934764858375931321, guid: f8d5afe3c3049704299c0c50d8be6c81, type: 3}
+  bulletforce: 3
   StopDistance: 10
   BackwardDistance: 7
   StartFireRate: 2

@@ -7,12 +7,14 @@ public class SpawnerNonEndless : Spawner
     private float spawnRate;
     [SerializeField] private int spawnAmount;
     [HideInInspector]public static int limit;
-    [HideInInspector]public int limitRequired;
+    [HideInInspector]public static int limitRequired;
+    [SerializeField] public GameObject Victory;
     // Start is called before the first frame update
     void Start()
     {
         spawnRate = startSpawnRate;
         limitRequired = spawnAmount;
+        
     }
 
     // Update is called once per frame
@@ -25,6 +27,7 @@ public class SpawnerNonEndless : Spawner
 
         if (limit == limitRequired) {
             Debug.Log("Stage Cleared");
+            Victory.SetActive(true);
         }
     }
 
@@ -41,8 +44,7 @@ public class SpawnerNonEndless : Spawner
         }
         else
         {
-            spawnRate -= Time.deltaTime;
-            
+            spawnRate -= Time.deltaTime;           
         }
     }
 }

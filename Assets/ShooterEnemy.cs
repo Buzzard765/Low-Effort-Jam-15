@@ -7,9 +7,9 @@ public class ShooterEnemy : Enemy
     public Transform[] FiringPoint;
     public GameObject bulletPF;
     public GameObject Drops;
+    public float bulletforce;
 
-    public float StopDistance, BackwardDistance;
-    
+    public float StopDistance, BackwardDistance;    
 
     public float StartFireRate;
     private float FireRate;
@@ -47,7 +47,9 @@ public class ShooterEnemy : Enemy
             {
                 for (int i = 0; i < FiringPoint.Length; i++)
                 {
-                GameObject homingbullet = Instantiate(bulletPF, FiringPoint[i].position, FiringPoint[i].rotation);
+                GameObject bullet = Instantiate(bulletPF, FiringPoint[i].position, FiringPoint[i].rotation);
+                Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
+                bulletRB.AddForce(FiringPoint[i].up * bulletforce, ForceMode2D.Impulse);
                 FireRate = StartFireRate;
                 }
             }

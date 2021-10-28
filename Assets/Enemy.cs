@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public float speed;
     public int score;
+    public int health;
     [HideInInspector]public Rigidbody2D enemyrb2d;
     [HideInInspector] public Transform PlayerPos;
     [HideInInspector] public TopDownShooter PlayerStats;
@@ -25,6 +26,10 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         findPlayer();
+        if (health == 0)
+        {
+            death();
+        }
     }
 
     public virtual void findPlayer() {
@@ -38,9 +43,14 @@ public class Enemy : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name.Contains("PlayerBullet")) {
-            Destroy(gameObject);
-            CoreGameManager.score += score;
-            SpawnerNonEndless.limit++;
+            health--;
+            
         }
+    }
+
+    void death() {
+        Destroy(gameObject);
+        CoreGameManager.score += score;
+        SpawnerNonEndless.limit++;
     }
 }

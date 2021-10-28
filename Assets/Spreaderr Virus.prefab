@@ -230,9 +230,10 @@ MonoBehaviour:
   - {fileID: 2885467895447643345}
   - {fileID: 1584649161085277416}
   - {fileID: 172071367237634577}
-  bulletPF: {fileID: 3064686200801297366, guid: 1b091bd2e4e02064fa6174c71eb193ac,
+  bulletPF: {fileID: 3064686200801297366, guid: a72524e123406a34985b285789b464fe,
     type: 3}
   Drops: {fileID: 3934764858375931321, guid: f8d5afe3c3049704299c0c50d8be6c81, type: 3}
+  bulletforce: 2
   StopDistance: 10
   BackwardDistance: 7
   StartFireRate: 5

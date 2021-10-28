@@ -5,7 +5,7 @@ using UnityEngine;
 public class HomingBullet : Bullet
 {    
     private Transform Target;
-    public float speed;
+    //public float speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +20,7 @@ public class HomingBullet : Bullet
    
 
     private void SeekPlayer() {
-        transform.position = Vector2.MoveTowards(transform.position, Target.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, Target.position, 1 * Time.deltaTime);
         Destroy(gameObject, 3f);
     }
 

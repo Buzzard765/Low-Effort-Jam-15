@@ -20,8 +20,8 @@ public class AllUIButtonScript : MonoBehaviour
         }
     }
 
-    void pauseGame(GameObject Panel) {
-        if (Time.timeScale == 1)
+    public void pauseGame(GameObject Panel) {
+        if (Time.timeScale == 1 && Panel.activeSelf == false)
         {
             Time.timeScale = 0;
             Panel.SetActive(true);
@@ -32,8 +32,13 @@ public class AllUIButtonScript : MonoBehaviour
         }
     }
 
-    void Restart() {
+    public void Restart() {
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
+    }
+
+    public void loadLevel(string scene)
+    {
+        SceneManager.LoadScene(scene);
     }
 }

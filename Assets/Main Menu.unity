@@ -355,6 +355,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0d9d4af47305c418c094ef4081be08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PausePanel: {fileID: 0}
+  Data: {fileID: 583243971}
+  Progress:
+  - level: {fileID: 1566227155}
+    Blank: {fileID: 0}
+    CompletePic: {fileID: 0}
+    IncompletePic: {fileID: 0}
+  - level: {fileID: 996415509}
+    Blank: {fileID: 0}
+    CompletePic: {fileID: 0}
+    IncompletePic: {fileID: 0}
+  - level: {fileID: 834368570}
+    Blank: {fileID: 0}
+    CompletePic: {fileID: 0}
+    IncompletePic: {fileID: 0}
+  - level: {fileID: 408396703}
+    Blank: {fileID: 0}
+    CompletePic: {fileID: 0}
+    IncompletePic: {fileID: 0}
+  - level: {fileID: 1048201568}
+    Blank: {fileID: 0}
+    CompletePic: {fileID: 0}
+    IncompletePic: {fileID: 0}
+  - level: {fileID: 103017588}
+    Blank: {fileID: 0}
+    CompletePic: {fileID: 0}
+    IncompletePic: {fileID: 0}
 --- !u!4 &217845282
 Transform:
   m_ObjectHideFlags: 0
@@ -921,7 +948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelReached: 0
-  status: 
+  status: 000000000000
 --- !u!114 &583243972
 MonoBehaviour:
   m_ObjectHideFlags: 0

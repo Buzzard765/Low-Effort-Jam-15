@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScripts : AllUIButtonScript
 {
-    LevelSelector Data;
+    public LevelSelector Data;
 
     [System.Serializable]
     public class LevelStatus
@@ -25,6 +25,7 @@ public class MainMenuScripts : AllUIButtonScript
     // Update is called once per frame
     void Update()
     {
+        refreshLevels();
         ExitGame();
     }
 
@@ -40,17 +41,22 @@ public class MainMenuScripts : AllUIButtonScript
     public void refreshLevels() {
         for (int i = 0; i < Progress.Count; i++) {
             //Disable dulu semua level kecuali pertama
+            Progress[i].level.interactable = false;
         }
         for (int i = 0; i <= Data.levelReached; i++) {
             if (i == Progress.Count) {
                 break;
             }
             Progress[i].level.interactable = true;
+
+            if (Data.status[i] == true) {
+                //insert anything related to the button sprite
+            }else if (Data.status[i] == false)
+            {
+                //insert anything related to the button sprite
+            }
         }
     }
 
-    public void loadLevel(string levelName)
-    {
-        SceneManager.LoadScene(levelName);
-    }
+    
 }

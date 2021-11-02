@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpawnerNonEndless : Spawner
 {
+    LevelSelector Data;
+    [SerializeField] int Currentlevel;
     private float spawnRate;
     [SerializeField] private int spawnAmount;
     [HideInInspector]public static int limit;
@@ -14,7 +17,7 @@ public class SpawnerNonEndless : Spawner
     {
         spawnRate = startSpawnRate;
         limitRequired = spawnAmount;
-        
+        // Refer the save data
     }
 
     // Update is called once per frame
@@ -27,6 +30,7 @@ public class SpawnerNonEndless : Spawner
 
         if (limit == limitRequired) {
             Debug.Log("Stage Cleared");
+            AddLevel();
             Victory.SetActive(true);
         }
     }
@@ -47,4 +51,19 @@ public class SpawnerNonEndless : Spawner
             spawnRate -= Time.deltaTime;           
         }
     }
+
+    public void AddLevel() {
+        if (Data.levelReached < Currentlevel) {
+            Data.status[Data.levelReached] = true;
+            Data.levelReached = Currentlevel;
+        }
+       
+    }
+
+    public void UpdateData() {
+        Data.SaveGame();
+        //Data.RefreshLevel();
+    }
+
+    
 }

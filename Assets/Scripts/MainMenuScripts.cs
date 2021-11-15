@@ -19,7 +19,7 @@ public class MainMenuScripts : AllUIButtonScript
     // Start is called before the first frame update
     void Start()
     {
-        
+        Data = GameObject.Find("Singleton").GetComponent<LevelSelector>();
     }
 
     // Update is called once per frame

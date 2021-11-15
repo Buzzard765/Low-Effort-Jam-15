@@ -38,18 +38,18 @@ public class ShooterEnemy : Enemy
             Instantiate(Drops, transform.position, Quaternion.identity);
             Destroy(gameObject);
             CoreGameManager.score += score;
-            SpawnerNonEndless.limit++;
+            SpawnerNonEndless.limit+=1;
         }
     }
 
-    void enemyShooting() {       
+    public virtual void enemyShooting() {       
             if (FireRate <= 0)
             {
                 for (int i = 0; i < FiringPoint.Length; i++)
                 {
                 GameObject bullet = Instantiate(bulletPF, FiringPoint[i].position, FiringPoint[i].rotation);
-                Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
-                bulletRB.AddForce(FiringPoint[i].up * bulletforce, ForceMode2D.Impulse);
+                //Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
+                //bulletRB.AddForce(FiringPoint[i].up * bulletforce, ForceMode2D.Impulse);
                 FireRate = StartFireRate;
                 }
             }

@@ -18,11 +18,19 @@ public class SpawnerNonEndless : Spawner
         spawnRate = startSpawnRate;
         limitRequired = spawnAmount;
         // Refer the save data
+        try
+        {
+            Data = FindObjectOfType<LevelSelector>();
+        }
+        catch {
+            Debug.Log("Testing Mode");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(limit + ":" + limitRequired);
         if (TopDownShooter.health >= 0)
         {
             spawnEnemy();

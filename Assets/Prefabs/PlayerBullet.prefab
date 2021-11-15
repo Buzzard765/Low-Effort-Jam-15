@@ -98,7 +98,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -146,3 +146,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bloweffect: {fileID: 723518884981433098, guid: 75728b8948678a243b003a8fd0a704fc,
     type: 3}
+  bulletforce: 5

@@ -218,6 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   score: 0
+  health: 0
   enemyrb2d: {fileID: 0}
   PlayerPos: {fileID: 0}
   PlayerStats: {fileID: 0}

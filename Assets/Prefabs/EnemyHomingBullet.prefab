@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2951460677562075161}
   - component: {fileID: -5557260792250747672}
   m_Layer: 0
-  m_Name: EnemyBullet
+  m_Name: EnemyHomingBullet
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,4 +146,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bloweffect: {fileID: 723518884981433098, guid: 75728b8948678a243b003a8fd0a704fc,
     type: 3}
-  speed: 5
+  bulletforce: 2

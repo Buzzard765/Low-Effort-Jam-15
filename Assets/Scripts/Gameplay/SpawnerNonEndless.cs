@@ -50,7 +50,8 @@ public class SpawnerNonEndless : Spawner
         {
             int randPos = Random.Range(0, SpawnSpot.Length);
             int randEnemy = Random.Range(0, enemy.Length);
-            Instantiate(enemy[randEnemy], SpawnSpot[randPos].position, SpawnSpot[randPos].rotation);
+            var GO = Instantiate(enemy[randEnemy], SpawnSpot[randPos].position, SpawnSpot[randPos].rotation);
+            Debug.Log("test", GO);
             spawnAmount -= 1;
             spawnRate = Random.Range(startSpawnRate - 1, startSpawnRate + 2);
         }

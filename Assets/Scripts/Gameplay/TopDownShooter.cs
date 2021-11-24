@@ -13,13 +13,15 @@ public class TopDownShooter : MonoBehaviour
     public  int maxhealth;
      
     public Joystick MovementJS;
+    private ShootingScript Weapon;
     // Start is called before the first frame update
     void Start()
     {
         cam = FindObjectOfType<Camera>();
         rb2d = GetComponent<Rigidbody2D>();
         health = maxhealth;
-        MovementJS = GameObject.Find("Movement Joystick").GetComponent<Joystick>();                
+        MovementJS = GameObject.Find("Movement Joystick").GetComponent<Joystick>();
+        Weapon = GetComponent<ShootingScript>();
     }
 
     // Update is called once per frame
@@ -55,6 +57,9 @@ public class TopDownShooter : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy")) {
             health--;
             Destroy(collision.gameObject);
+            if (Weapon.weaponRank_get > 0) {
+                Weapon.weaponRank_get -= 2;
+            }
         }
 
     }
@@ -73,7 +78,13 @@ public class TopDownShooter : MonoBehaviour
             }
             Destroy(collision.gameObject);
         }
-
+        if (collision.gameObject.name.Contains("Weapon Plus"))
+        {
+            Weapon.weaponRank_get += 2;
+            Destroy(collision.gameObject);
+        }
     }
+
+        
 
 }

@@ -28,17 +28,19 @@ public class ShooterEnemy : Enemy
     void Update()
     {
         findPlayer();
-        
+        if (health == 0)
+        {
+            death();
+            Instantiate(Drops, transform.position, Quaternion.identity);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name.Contains("PlayerBullet"))
-        {
-            Instantiate(Drops, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-            CoreGameManager.score += score;
-            SpawnerNonEndless.limit+=1;
+        {           
+            health--;
+            Destroy(collision.gameObject);
         }
     }
 

@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 8099242451216132827}
   - component: {fileID: 7424541109338712669}
   - component: {fileID: 8254724340758740064}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shooter Virus
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -155,8 +155,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  score: 0
-  health: 0
+  score: 1
+  health: 2
   enemyrb2d: {fileID: 0}
   PlayerPos: {fileID: 0}
   PlayerStats: {fileID: 0}
@@ -164,7 +164,6 @@ MonoBehaviour:
   sprrdr: {fileID: 0}
   randomSprite:
   - {fileID: 2853011766164936452, guid: 64ab52faac8cf704baed3c133fa56ae2, type: 3}
-  - {fileID: 4180298707136297429, guid: 64ab52faac8cf704baed3c133fa56ae2, type: 3}
   FiringPoint:
   - {fileID: 2885467895447643345}
   bulletPF: {fileID: 3064686200801297366, guid: 1b091bd2e4e02064fa6174c71eb193ac,

@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3934764858375931323}
   - component: {fileID: 3934764858375931320}
   - component: {fileID: 3934764858375931325}
-  m_Layer: 0
+  - component: {fileID: -1982890039991631217}
+  m_Layer: 10
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -702417484383542198, guid: 8e8f69f17de1c8e4ab880a781b6187f1,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.2208755, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -120,7 +121,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -136,3 +137,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.53, y: 0.54}
   m_EdgeRadius: 0
+--- !u!114 &-1982890039991631217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3934764858375931321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d70de27e57ef63e49bd3a8a8d7e7f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

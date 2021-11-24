@@ -103,8 +103,8 @@ GameObject:
   - component: {fileID: 8099242451216132827}
   - component: {fileID: 7424541109338712669}
   - component: {fileID: 8254724340758740064}
-  m_Layer: 0
-  m_Name: Spreaderr Virus
+  m_Layer: 9
+  m_Name: Spreader Virus
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -217,8 +217,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  score: 0
-  health: 0
+  score: 1
+  health: 1
   enemyrb2d: {fileID: 0}
   PlayerPos: {fileID: 0}
   PlayerStats: {fileID: 0}
@@ -226,14 +226,13 @@ MonoBehaviour:
   sprrdr: {fileID: 0}
   randomSprite:
   - {fileID: 3230153013152815032, guid: 201f4b1deb1bb35498f29f56a883c93d, type: 3}
-  - {fileID: -8510244886076544966, guid: 201f4b1deb1bb35498f29f56a883c93d, type: 3}
   FiringPoint:
   - {fileID: 2885467895447643345}
   - {fileID: 1584649161085277416}
   - {fileID: 172071367237634577}
   bulletPF: {fileID: 3064686200801297366, guid: a72524e123406a34985b285789b464fe,
     type: 3}
-  Drops: {fileID: 3934764858375931321, guid: f8d5afe3c3049704299c0c50d8be6c81, type: 3}
+  Drops: {fileID: 3934764858375931321, guid: 29250f801ec586a4494a250be26f5869, type: 3}
   bulletforce: 2
   StopDistance: 10
   BackwardDistance: 7

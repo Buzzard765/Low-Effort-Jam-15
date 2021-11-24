@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bulletRB = GetComponent<Rigidbody2D>();
+        bulletRB = GetComponent<Rigidbody2D>();       
     }
 
     // Update is called once per frame
@@ -24,8 +24,10 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        GameObject blow = Instantiate(Bloweffect, transform.position, Quaternion.identity);
-        Destroy(blow, 5f);
-        Destroy(gameObject);
+        if (collision.gameObject.name.Contains("Bullet")) {
+            GameObject blow = Instantiate(Bloweffect, transform.position, Quaternion.identity);
+            Destroy(blow, 5f);
+            Destroy(gameObject);
+        }
     }
 }

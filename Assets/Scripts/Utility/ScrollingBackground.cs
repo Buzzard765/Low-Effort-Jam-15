@@ -22,8 +22,8 @@ public class ScrollingBackground : MonoBehaviour
     {
         Mat = MR.material;
         Offset = Mat.mainTextureOffset;
-        Offset.x = PlayerPos.position.x / 10f;
-        Offset.y = PlayerPos.position.y / 10f;
+        Offset.x = PlayerPos.position.x / 50f;
+        Offset.y = PlayerPos.position.y / 50f;
         Mat.mainTextureOffset = Offset;
     }
 }

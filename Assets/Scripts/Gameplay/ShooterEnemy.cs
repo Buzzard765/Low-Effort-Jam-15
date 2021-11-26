@@ -37,10 +37,15 @@ public class ShooterEnemy : Enemy
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+       
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.gameObject.name.Contains("PlayerBullet"))
-        {           
-            health--;
+        {
             Destroy(collision.gameObject);
+            health--;
         }
     }
 
@@ -64,22 +69,23 @@ public class ShooterEnemy : Enemy
     public override void findPlayer() {
         Vector2 direction = PlayerPos.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+        float FiringRange = Vector2.Distance(transform.position, PlayerPos.position);
         enemyrb2d.rotation = angle;
-        direction.Normalize();
-        
-        if (Vector2.Distance(transform.position, PlayerPos.position) > StopDistance)
+        direction.Normalize();        
+        if (FiringRange > StopDistance)
         {
             //Move Towards Firing Range
-            enemyrb2d.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
-            
+            enemyrb2d.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));            
         }
-        else if (Vector2.Distance(transform.position, PlayerPos.position) < StopDistance && Vector2.Distance(transform.position, PlayerPos.position) > BackwardDistance)
+        else
         {
+            Debug.Log("onRange");
             enemyShooting();
-            enemyrb2d.transform.position = this.transform.position;
+            //enemyrb2d.transform.position = this.transform.position;
         }
-        else if (Vector2.Distance(transform.position, PlayerPos.position) < BackwardDistance)
+        if (Vector2.Distance(transform.position, PlayerPos.position) < BackwardDistance)
         {
+            Debug.Log("Retreating");
             enemyShooting();
             enemyrb2d.MovePosition((Vector2)transform.position - (direction * speed * Time.deltaTime));
         }

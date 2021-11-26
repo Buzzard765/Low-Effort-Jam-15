@@ -234,8 +234,8 @@ MonoBehaviour:
     type: 3}
   Drops: {fileID: 3934764858375931321, guid: 29250f801ec586a4494a250be26f5869, type: 3}
   bulletforce: 2
-  StopDistance: 10
-  BackwardDistance: 7
+  StopDistance: 7
+  BackwardDistance: 5
   StartFireRate: 5
 --- !u!50 &8254724340758740064
 Rigidbody2D:

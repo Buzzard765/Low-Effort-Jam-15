@@ -36,9 +36,13 @@ public class TopDownShooter : MonoBehaviour
 
     private void FixedUpdate()
     {
-        movementControl();
-        if (health == 0) {            
+
+        if (health <= 0)
+        {
             Destroy(gameObject, 3f);
+        }
+        else {
+            movementControl();
         }
     }
 
@@ -54,13 +58,7 @@ public class TopDownShooter : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
-        if (collision.gameObject.CompareTag("Enemy")) {
-            health--;
-            Destroy(collision.gameObject);
-            if (Weapon.weaponRank_get > 0) {
-                Weapon.weaponRank_get -= 2;
-            }
-        }
+        
 
     }
 
@@ -82,6 +80,15 @@ public class TopDownShooter : MonoBehaviour
         {
             Weapon.weaponRank_get += 2;
             Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            health--;
+            Destroy(collision.gameObject);
+            if (Weapon.weaponRank_get > 0)
+            {
+                Weapon.weaponRank_get -= 2;
+            }
         }
     }
 

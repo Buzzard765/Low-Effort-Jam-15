@@ -12,7 +12,7 @@ public class SpecialEnemy : ShooterEnemy
         PlayerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         enemyrb2d = GetComponent<Rigidbody2D>();
         sprrdr = GetComponent<SpriteRenderer>();
-        sprrdr.sprite = randomSprite[Random.Range(0, randomSprite.Length)];
+        
         FireRate = StartFireRate;
     }
 

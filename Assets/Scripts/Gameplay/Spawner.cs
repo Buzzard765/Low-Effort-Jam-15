@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    public TopDownShooter Stats;
     public GameObject[] enemy;
     public Transform[] SpawnSpot;
     private float spawnRate;
@@ -17,7 +18,7 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (TopDownShooter.health >= 0) {
+        if (Stats.health >= 0) {
             spawnEnemy();
         }
         

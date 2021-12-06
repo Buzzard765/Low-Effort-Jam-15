@@ -12,14 +12,14 @@ public class Enemy : MonoBehaviour
     [HideInInspector] public TopDownShooter PlayerStats;
     [HideInInspector] public Vector2 movement;
     [HideInInspector] public SpriteRenderer sprrdr;
-    public Sprite[] randomSprite;
+    //public Sprite[] randomSprite;
     // Start is called before the first frame update
     void Start()
     {
         PlayerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         enemyrb2d = GetComponent<Rigidbody2D>();
         sprrdr = GetComponent<SpriteRenderer>();
-        sprrdr.sprite = randomSprite[Random.Range(0, randomSprite.Length)]; 
+        //sprrdr.sprite = randomSprite[Random.Range(0, randomSprite.Length)]; 
     }
 
     // Update is called once per frame

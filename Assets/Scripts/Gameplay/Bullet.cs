@@ -17,9 +17,7 @@ public class Bullet : MonoBehaviour
     void Update()
     {
 
-        bulletRB.AddRelativeForce(Vector2.up * bulletforce, ForceMode2D.Impulse);
-        //bulletRB.velocity = Vector2.up * Time.deltaTime;       
-        Destroy(gameObject, 5f);
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -30,4 +28,6 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    
 }

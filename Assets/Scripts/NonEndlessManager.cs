@@ -19,13 +19,13 @@ public class NonEndlessManager : CoreGameManager
     {
         Debug.Log(SpawnerNonEndless.limit);
         ScoreText.text = "Score: " + score.ToString();
-        HealthText.text = "Health: " + TopDownShooter.health.ToString();
-        if (TopDownShooter.health == 0)
+        HealthText.text = "Health: " + Stats.health.ToString();
+        if (Stats.health == 0)
         {
             GameOver();
             Debug.Log("Game Over");
         }
-        else if (SpawnerNonEndless.limit == SpawnerNonEndless.limitRequired && TopDownShooter.health != 0) {
+        else if (SpawnerNonEndless.limit == SpawnerNonEndless.limitRequired && Stats.health != 0) {
             Clear();
         }
     }

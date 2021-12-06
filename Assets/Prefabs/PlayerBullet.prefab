@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 7133580943821536936}
   - component: {fileID: 1190051547951961324}
   - component: {fileID: 2951460677562075161}
-  - component: {fileID: 5560306219215881673}
+  - component: {fileID: 8308741008387007055}
   m_Layer: 11
   m_Name: PlayerBullet
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +104,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &2951460677562075161
 BoxCollider2D:
@@ -132,7 +132,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.56, y: 2.26}
   m_EdgeRadius: 0
---- !u!114 &5560306219215881673
+--- !u!114 &8308741008387007055
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,9 +141,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3064686200801297366}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 540e647f1826d8d44a566260cd828430, type: 3}
+  m_Script: {fileID: 11500000, guid: 17cbc01be53ae2447b6339b2d55f3b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Bloweffect: {fileID: 723518884981433098, guid: 75728b8948678a243b003a8fd0a704fc,
     type: 3}
-  bulletforce: 5
+  bulletforce: 3

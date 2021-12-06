@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CoreGameManager : MonoBehaviour
 {
-    
+    public TopDownShooter Stats;
     public GameObject ResultPanel;
     public Text ScoreText, ResultText, HealthText;
     public static int score;
@@ -20,8 +20,8 @@ public class CoreGameManager : MonoBehaviour
     void Update()
     {
         ScoreText.text = "Score: " + score.ToString();
-        HealthText.text = "Health: " + TopDownShooter.health.ToString();
-        if (TopDownShooter.health == 0) {
+        HealthText.text = "Health: " + Stats.health.ToString();
+        if (Stats.health == 0) {
             GameOver();
             Debug.Log("Game Over");
         }        

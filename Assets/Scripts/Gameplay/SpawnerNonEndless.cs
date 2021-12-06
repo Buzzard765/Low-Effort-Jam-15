@@ -8,6 +8,7 @@ public class SpawnerNonEndless : Spawner
     LevelSelector Data;
     [SerializeField] int Currentlevel;
     private float spawnRate;
+
     [SerializeField] private int spawnAmount;
     [HideInInspector]public static int limit;
     [HideInInspector]public static int limitRequired;
@@ -31,7 +32,7 @@ public class SpawnerNonEndless : Spawner
     void Update()
     {
         Debug.Log(limit + ":" + limitRequired);
-        if (TopDownShooter.health >= 0)
+        if (Stats.health >= 0)
         {
             spawnEnemy();
         }

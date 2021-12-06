@@ -9,7 +9,7 @@ public class TopDownShooter : MonoBehaviour
     private Rigidbody2D rb2d;
     Vector2 movement, mousePos;
     private Camera cam;
-    static public int health;
+    public int health;
     public  int maxhealth;
      
     public Joystick MovementJS;

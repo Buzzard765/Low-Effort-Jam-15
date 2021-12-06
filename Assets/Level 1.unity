@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movespeed: 3
+  health: 0
   maxhealth: 10
   MovementJS: {fileID: 0}
 --- !u!212 &89130391
@@ -647,8 +648,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3e546fbd7991a64aa6873ff64d38737, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stats: {fileID: 89130390}
   enemy:
-  - {fileID: 7640631141893172055, guid: 168b23a09af662e42868fa72901a058a, type: 3}
+  - {fileID: 7640631141893172055, guid: cfd69ed4601b4664bad5ee9637c71951, type: 3}
   SpawnSpot:
   - {fileID: 1752465575}
   - {fileID: 2134318819}
@@ -994,6 +996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3c1d620eea3673499638272b407e357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stats: {fileID: 0}
   ResultPanel: {fileID: 1362374162}
   ScoreText: {fileID: 1032356057}
   ResultText: {fileID: 89938796}
@@ -1024,6 +1027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 480f2273d31ee0d448f0c3a3bc824d00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stats: {fileID: 89130390}
   ResultPanel: {fileID: 1362374162}
   ScoreText: {fileID: 1032356057}
   ResultText: {fileID: 89938796}

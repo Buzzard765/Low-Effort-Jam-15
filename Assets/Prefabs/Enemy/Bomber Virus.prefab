@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7424541109338712669}
   - component: {fileID: 8254724340758740064}
   m_Layer: 9
-  m_Name: Shooter Virus
+  m_Name: Bomber Virus
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,11 +162,9 @@ MonoBehaviour:
   PlayerStats: {fileID: 0}
   movement: {x: 0, y: 0}
   sprrdr: {fileID: 0}
-  randomSprite:
-  - {fileID: 2853011766164936452, guid: 64ab52faac8cf704baed3c133fa56ae2, type: 3}
   FiringPoint:
   - {fileID: 2885467895447643345}
-  bulletPF: {fileID: 3064686200801297366, guid: 1b091bd2e4e02064fa6174c71eb193ac,
+  bulletPF: {fileID: 3064686200801297366, guid: 965983bfc8c02164d975aecbf9fe1cc4,
     type: 3}
   Drops: {fileID: 3934764858375931321, guid: f8d5afe3c3049704299c0c50d8be6c81, type: 3}
   bulletforce: 3

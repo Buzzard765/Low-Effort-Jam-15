@@ -20,7 +20,7 @@ public class ShooterEnemy : Enemy
         PlayerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         enemyrb2d = GetComponent<Rigidbody2D>();
         sprrdr = GetComponent<SpriteRenderer>();
-        sprrdr.sprite = randomSprite[Random.Range(0, randomSprite.Length)];
+        
         FireRate = StartFireRate;
     }
 
@@ -40,14 +40,14 @@ public class ShooterEnemy : Enemy
        
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name.Contains("PlayerBullet"))
         {
             Destroy(collision.gameObject);
             health--;
         }
-    }
+    }*/
 
     public virtual void enemyShooting() {       
             if (FireRate <= 0)

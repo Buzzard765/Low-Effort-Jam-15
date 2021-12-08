@@ -650,7 +650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Stats: {fileID: 89130390}
   enemy:
-  - {fileID: 7640631141893172055, guid: cfd69ed4601b4664bad5ee9637c71951, type: 3}
+  - {fileID: 7640631141893172055, guid: e2ee8626e2a51d343a88f6bbc3ccf1fc, type: 3}
   SpawnSpot:
   - {fileID: 1752465575}
   - {fileID: 2134318819}

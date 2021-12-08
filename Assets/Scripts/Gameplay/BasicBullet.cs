@@ -20,7 +20,7 @@ public class BasicBullet : Bullet
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (gameObject.CompareTag("Player"))
+        /*if (gameObject.CompareTag("Player"))
         {
             if (collision.gameObject.CompareTag("Enemy"))
             {
@@ -38,7 +38,7 @@ public class BasicBullet : Bullet
                 collision.GetComponent<TopDownShooter>().health--;
             }
             Destroy(gameObject);
-        }
+        }*/
         
     }
 

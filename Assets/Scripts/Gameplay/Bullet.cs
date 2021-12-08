@@ -28,6 +28,32 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (gameObject.CompareTag("Player"))
+        {
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                collision.GetComponent<Enemy>().health--;
+            }
+            else if (collision.gameObject.name.Contains("Shield")) {
+                collision.GetComponent<Shield>().HP--;
+            }
+            Destroy(gameObject);
+        }
+        else if (gameObject.CompareTag("Enemy"))
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                if (collision.gameObject.name.Contains("Stealth")) {
+                    StealthEnemy StealthCheck = collision.GetComponent<StealthEnemy>();
 
-    
+                }
+                collision.GetComponent<TopDownShooter>().health--;
+            }
+            Destroy(gameObject);
+        }
+
+    }
+
 }

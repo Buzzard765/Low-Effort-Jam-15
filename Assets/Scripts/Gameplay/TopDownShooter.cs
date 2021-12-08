@@ -14,6 +14,9 @@ public class TopDownShooter : MonoBehaviour
      
     public Joystick MovementJS;
     private ShootingScript Weapon;
+
+    public AudioSource AllAudio;
+    public AudioClip SFX_Shoot, SFX_Shield, SFX_WeaponPlus, SFX_Death;
     // Start is called before the first frame update
     void Start()
     {
@@ -74,11 +77,13 @@ public class TopDownShooter : MonoBehaviour
             {
                 health++;
             }
+            AllAudio.PlayOneShot(SFX_Shield);
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.name.Contains("Weapon Plus"))
         {
             Weapon.weaponRank_get += 2;
+            AllAudio.PlayOneShot(SFX_Shield);
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Enemy"))

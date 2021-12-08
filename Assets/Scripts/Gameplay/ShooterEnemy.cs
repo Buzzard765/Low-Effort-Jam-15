@@ -66,7 +66,7 @@ public class ShooterEnemy : Enemy
             }
     }
 
-    public override void findPlayer() {
+    public virtual void findPlayer() {
         Vector2 direction = PlayerPos.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
         float FiringRange = Vector2.Distance(transform.position, PlayerPos.position);

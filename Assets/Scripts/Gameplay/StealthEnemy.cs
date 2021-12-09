@@ -62,16 +62,16 @@ public class StealthEnemy : ShooterEnemy
 
     void Cloaking(bool onCloak) {
         Debug.Log(onCloak, this.gameObject);
-        var opacity = sprrdr.color.a;       
+        //var opacity = sprrdr.color.a;       
         
         if (onCloak == true)
         {
             coll.enabled = false;
-            opacity = 0.2f;            
+            sprrdr.color = new Color(1f, 1f, 1f, 0.25f);
         }
         else if (onCloak == false){
             coll.enabled = true;
-            opacity = 1f; 
+            sprrdr.color = new Color(1f, 1f, 1f, 1f);
         }
     }
 }

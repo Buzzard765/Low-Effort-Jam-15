@@ -190,5 +190,5 @@ MonoBehaviour:
   Drops: {fileID: 0}
   bulletforce: 5
   StopDistance: 6
-  BackwardDistance: 6
+  BackwardDistance: 5
   StartFireRate: 2

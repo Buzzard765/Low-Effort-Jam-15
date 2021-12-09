@@ -14,10 +14,13 @@ public class ShootingScript : MonoBehaviour
     public GameObject bulletPF;
     public float bulletforce;
     public Joystick RotationJS;
+
+    public AudioSource AllAudio;
+    public AudioClip SFX_Shoot;
     // Start is called before the first frame update
     void Start()
     {
-              
+        AllAudio = GetComponent<AudioSource>();
         RotationJS = GameObject.Find("Rotation Joystick").GetComponent<Joystick>();
     }
 
@@ -39,6 +42,7 @@ public class ShootingScript : MonoBehaviour
     {
         for (int i = 0; i <= weaponRank; i++) {
             GameObject bullet = Instantiate(bulletPF, FiringPoint[i].position, FiringPoint[i].rotation);
+            AllAudio.PlayOneShot(SFX_Shoot);
         }
         
         //Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
